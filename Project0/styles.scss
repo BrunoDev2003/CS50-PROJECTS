@@ -1,0 +1,26 @@
+$center: align-items center;
+
+.form {
+    display: flex;
+    align-items: $center;
+    justify-content:center;
+    margin-top: 10px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: 350px;
+    margin-top: 10rem;
+}
+
+.footer {
+    align-items: center;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 400px;
+    padding: 20px;
+}
