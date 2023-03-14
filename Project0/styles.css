@@ -9,6 +9,10 @@ body {
   background-color: #f1eded;
 }
 
+.title {
+  color: red;
+}
+
 .form {
   display: flex;
   align-items: align-items center;

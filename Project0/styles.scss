@@ -1,4 +1,5 @@
 $center: align-items center;
+$red: red;
 
 * {
     margin-top:0px;
@@ -10,7 +11,9 @@ body {
     padding: 0px;
     background-color: #f1eded;
 }
-
+.title {
+    color: $red;
+}
 .form {
     display: flex;
     align-items: $center;
