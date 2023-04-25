@@ -1,0 +1,45 @@
+$center: align-items center;
+$red: red;
+
+* {
+    margin-top:0px;
+    padding: 0px;
+}
+
+body {
+    margin-top: 0px;
+    padding: 0px;
+    background-color: #f1eded;
+}
+.title {
+    color: $red;
+}
+.form {
+    display: flex;
+    align-items: $center;
+    justify-content:center;
+    margin-top: 10px;
+}
+
+header {
+    margin-left: 35rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: 350px;
+    position: inherit;
+    margin-top: 10rem;
+}
+
+.footer {
+    align-items: center;
+    background-color: #f1eded;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 400px;
+    padding: 20px;
+}
