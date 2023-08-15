@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de cliques</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: rgb(160, 139, 139);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contador de cliques</h1>
+    <button id="button-count"class="btn btn-primary btn-sm">Clicar</button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mouse-fill" viewBox="0 0 16 16">
+        <path d="M3 5a5 5 0 0 1 10 0v6a5 5 0 0 1-10 0V5zm5.5-1.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 1 0v-2z"/>
+      </svg>
+    <button id="button-reset" class="btn btn-primary btn-sm">Resetar</button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+      </svg>
+    <p>Botão clicado 
+        <span id="button-count-display">
+            
+            0
+        </span> vezes
+</p>
+<p>Total de 
+    <span id="button-reset-display">
+        0
+    </span> resets
+</p>
+
+<p>Contador foi divisivel por dez um total de 
+    <span id="button-count-divisivel-display">
+        0
+    </span> vezes
+</p>
+
+    <script type="text/javascript">
+        var count = 0;
+        var count_div = 0;
+        var reset = 0;
+        var btn_count = document.getElementById("button-count");
+        var btn_reset = document.getElementById("button-reset");
+        var display_count = document.getElementById("button-count-display");
+        var display_reset = document.getElementById("button-reset-display");
+        var btn_count_div = document.getElementById("button-count-divisivel-display");
+        btn_count.onclick = function () {
+            count++;
+            display_count.innerHTML = count;
+            if (count % 10 == 0) {
+                alert("Você já clicou 10 vezes!");
+                count_div++;
+                btn_count_div.innerHTML = count_div;
+            }
+
+        }
+        btn_reset.onclick = function () {
+            count = count - count;
+            count_div = count_div - count_div;
+            btn_count_div.innerHTML = count_div;
+            display_count.innerHTML = count;
+            reset++;
+            display_reset.innerHTML = reset;
+        }
+    </script>
+</body>
+</html>
